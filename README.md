@@ -4,7 +4,7 @@
 
 ### "apd_detection"
 En esta carpeta hay diversos scripts de Python.
-- "get_apd_count.py", permite leer la salida de la FPGA cada 4kHz, arroja dos archivos "timestamp.csv" y "error.csv" (ESTADO: Finalizado).
+- "get_apd_count.py", permite leer la salida de la FPGA cada frecuencia y por el tiempo deseado, arroja dos archivos "timestamp.csv" y "error.csv", **necesita de dos argumentos, la frecuencia y el tiempo** (ESTADO: Finalizado).
 - "graph.py", permite graficar el archivo "timestamp.csv" (ESTADO: No Finalizado, queda por hacer una lectura más legible).
 
 - "hertz_to_sec.py", permite leer la salida de la FPGA con Hz a elección del usuario, arroja dos archivos "timestamp.csv" y "error.csv" (ESTADO: No Finalizado, queda por probar diversos kHz y hacer un test con la FPGA).
