@@ -1,7 +1,8 @@
-hertz = float(input("hertz: "))
+import sys
+hertz = float(sys.argv[1])
 sec = 1/hertz
 
-
+                                            # TO DO: Probar diferentes frecuencias 
 multiplos = []
 for i in range(1, 10):
    multiplos.append(format(sec*i, '.6f'))
