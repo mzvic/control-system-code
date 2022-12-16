@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 import serial
 import sys
 
-fpga_uart = serial.Serial(port='/dev/ttyUSB1', baudrate=4_000_000)
+# fpga_uart = serial.Serial(port='/dev/ttyUSB1', baudrate=4_000_000)
 
 try:
     interval = timedelta(seconds=int(sys.argv[2]))
@@ -37,8 +37,9 @@ with open('timestamp.csv', 'w') as f:
 
                 a = int(x[12]) # 0.000a00
                 b = int(x[13]) # 0.0000b0
-                read_hex = ord(fpga_uart.read())               
-
+                # read_hex = ord(fpga_uart.read())            
+                read_hex = 0   
+                
                 if (a == a_list[0] and b == b_list[0]) or (a == a_list[1] and b == b_list[1]) or (a == a_list[2] and b == b_list[2]) or (a == a_list[3] and b == b_list[3]) or (a == a_list[4] and b == b_list[4]) or (a == a_list[5] and b == b_list[5]) or (a == a_list[6] and b == b_list[6]) or (a == a_list[7] and b == b_list[7]) or (a == a_list[8] and b == b_list[8]): # Multiples of seconds
                     f.write(str(ts_b) + ',' + str(read_hex) + '\n')
                     print(str(ts_b) + ',' + str(read_hex) + '\n')

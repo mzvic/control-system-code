@@ -1,9 +1,6 @@
-# Script to test the stop function at time from input
-
 from datetime import datetime, timedelta
 import sys
 
-# ✅ add seconds to current time
 now = datetime.today()
 result_2 = now + timedelta(seconds=int(sys.argv[1]))
 
